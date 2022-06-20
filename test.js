@@ -14,8 +14,9 @@ for(let i=0; i < testArr.length; i++){
 }
 console.log('min' + ' ' + min);
 
-let mediana = testArr.length/2;
-let medianaRes =  (Number(testArr[mediana-1]) + Number(testArr[mediana])) * 0.5;
+let sortedArr = testArr.sort((a,b) => a - b);
+let mediana = Math.ceil((testArr.length)/2);
+let medianaRes = sortedArr[mediana];
 console.log('median' + ' ' + medianaRes);
 
 let summ = testArr.reduce((accum, item) => {
